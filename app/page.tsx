@@ -1,19 +1,30 @@
+"use client";
+import Image from "next/image";
+import MailchimpFormContainer from "./components/mailchimp";
+import logo from "@/public/phutureG.png";
+
 export default function Home() {
   return (
-    <div className="relative min-h-screen h-screen overflow-hidden w-screen bg-[url('@/app/assets/bg4.jpg')] bg-cover bg-center opacity-95">
+    <div className="relative min-h-screen h-screen overflow-hidden w-screen bg-[url('/bg.jpg')] bg-cover bg-center opacity-95">
       <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_at_top_left,_rgba(30,215,96,0.25)_0%,_transparent_40%)] transition-all duration-300" />
-      <div>
-        <h1 className="text-3xl text-turquoise1 font-medium p-2">phuture.ai</h1>
+      <div className="flex flex-row items-center text-center gap-1 p-2">
+        <Image src={logo} alt="phuture-logo" className="w-15 h-15" />
+        <h1
+          className="md:text-3xl text-xl text-turquoise1 font-medium p-2"
+          style={{ textShadow: "2px 2px 6px rgba(110, 255, 163, 0.70)" }}
+        >
+          phuture.ai
+        </h1>
       </div>
 
       <div className="flex justify-center flex-col">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center text-center">
           <span
             id="title"
-            className="relative mt-[7.5%] text-green2 font-bold overflow-hidden py-5 m-0 "
+            className="relative mt-[5%] text-green2 font-bold overflow-hidden py-5 m-0 "
             style={{ textShadow: "2px 2px 6px rgba(110, 255, 163, 0.75)" }}
           >
-            building the future.
+            welcome 2 the phuture.
             <div className="absolute top-0 left-0 w-full h-full z-[2] mix-blend-darken pointer-events-none">
               <div className="aurora__item"></div>
               <div className="aurora__item"></div>
@@ -23,9 +34,37 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="flex justify-center items-center text-turquoise1 text-2xl flex-col">
-          <h1 className="font-bold">phuture is derived from phusis (φύσις, greek for nature) + future</h1>
-          <h1>build a world with nature, not by destroying it.</h1>
+        <div className="flex justify-center items-center text-green2 md:text-xl text-md flex-col">
+          <div className="md:w-[50%] w-[75%] bg-turquoise2/10 rounded-lg p-1 backdrop-blur-[2px]">
+            <h1
+              className="p-2 px-5 text-center font-semibold"
+              style={{ textShadow: "2px 2px 6px rgba(110, 255, 163, 0.3)" }}
+            >
+              reenvisioning a paradigm where ai meets the wild.
+            </h1>
+            <h1
+              className="p-2 px-5 text-center"
+              style={{ textShadow: "2px 2px 6px rgba(110, 255, 163, 0.3)" }}
+            >
+              <span className="font-bold italic">phuture </span>is inspired by
+              the greek word{" "}
+              <span className="font-semibold italic">φύσις (phusis)</span>,
+              &apos;nature&apos;. we&apos;re currently building an app to cultivate
+              engagement with the{" "}
+              <span className="font-semibold">ecological world </span> around
+              us.
+            </h1>
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center mt-[2%] flex-col">
+          <h1
+            className="p-2 px-5 text-center text-green2 font-semibold"
+            style={{ textShadow: "2px 2px 6px rgba(110, 255, 163, 0.3)" }}
+          >
+            join our waiting list.
+          </h1>
+          <MailchimpFormContainer className=" bg-turquoise2/10 p-2 rounded-lg backdrop-blur-[3px] w-[35%]" />
         </div>
       </div>
     </div>
