@@ -1,41 +1,49 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import AlertFlash from "./alert";
+import { AnimatePresence } from "motion/react";
 
 interface MailingInputProps {
-  onSubscribe: (formData: { EMAIL: string }) => Promise<{ status: string; message: string }>;
+  onSubscribe: (formData: {
+    EMAIL: string;
+  }) => Promise<{ status: string; message: string }>;
 }
 
 const MailingInput: React.FC<MailingInputProps> = ({ onSubscribe }) => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [status, setStatus] = useState<string | null>(null);
-  const [message, setMessage] = useState<string>('');
+  const [message, setMessage] = useState<string>("");
+  const [showAlert, setShowAlert] = useState<boolean>(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email || !emailRegex.test(email)) {
-      setStatus('error');
-      setMessage('please enter a valid email address');
+      setStatus("error");
+      setMessage("please enter a valid email address");
+      setShowAlert(true);
       return;
     }
 
-    setStatus('sending');
-    setMessage('');
+    setStatus("sending");
+    setMessage("sending...");
+    setShowAlert(true);
 
     try {
       const result = await onSubscribe({ EMAIL: email });
       setStatus(result.status);
       setMessage(result.message);
-      
-      if (result.status === 'success') {
-        setEmail('');
+
+      if (result.status === "success") {
+        setEmail("");
+        setShowAlert(true);
       }
     } catch (error) {
       console.log(error);
-      setStatus('error');
-      setMessage('something went wrong. try again.');
+      setStatus("error");
+      setMessage("something went wrong. try again.");
     }
   };
 
@@ -55,29 +63,35 @@ const MailingInput: React.FC<MailingInputProps> = ({ onSubscribe }) => {
           />
           <input
             type="submit"
-            value={status === "sending" ? "..." : "join."}
-            disabled={status === "sending"}
+            value="join."
+            disabled={showAlert}
             className="px-4 p-3 cursor-pointer rounded-r-lg rounded-l-lg md:rounded-l-none border-r-2 border-t-2 border-b-2 md:border-l-0 border-l-2 border-turquoise2 disabled:opacity-50 disabled:cursor-not-allowed"
           />
         </div>
-
-        {/* Status messages */}
-        <div className="w-full flex items-center justify-center">
-          {status === "sending" && (
-            <div className="text-blue2 mt-2">sending...</div>
-          )}
-          {status === "error" && (
-            <div className="text-red-500 mt-2 text-center">
-              {message}
-            </div>
-          )}
-          {status === "success" && (
-            <div className="text-green1 mt-2 text-center">
-              {message}
-            </div>
-          )}
-        </div>
       </form>
+
+      <AnimatePresence
+        initial={false}
+        onExitComplete={() => {
+          setShowAlert(false);
+        }}
+      >
+        {showAlert && (
+          <>
+            <AlertFlash
+              status={
+                status == "sending"
+                  ? "SENDING"
+                  : status == "success"
+                  ? "SUCCESS"
+                  : "ERROR"
+              }
+              message={message}
+              onClose={() => setShowAlert(false)}
+            />
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 };
