@@ -8,7 +8,7 @@
   --color-green3: #90EE90;
   --color-turquoise1: #daf4f0;
   --color-turquoise2: #70e2ff;
-  --color-turquuoise3: #0e70ad;
+  --color-turquoise3: #0e70ad;
   --color-blue1: #add8e6;
   --color-blue2: #1f87ff;
   --color-blue3: #143bff;
@@ -203,4 +203,14 @@ button{
   bottom: -50%;
   animation: aurora-border 5s ease-in-out infinite,
     aurora-4 20s ease-in-out infinite alternate;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--color-turquoise2);
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232329;
 }

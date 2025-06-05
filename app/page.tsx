@@ -21,7 +21,7 @@ export default function Home() {
         <div className="flex justify-center items-center text-center">
           <span
             id="title"
-            className="relative mt-[5%] text-green2 font-bold overflow-hidden py-5 m-0 "
+            className="relative text-green2 font-bold overflow-hidden py-5 m-0 "
             style={{ textShadow: "2px 2px 6px rgba(110, 255, 163, 0.75)" }}
           >
             welcome 2 the phuture.
@@ -35,12 +35,12 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center items-center text-green2 md:text-xl text-md flex-col">
-          <div className="md:w-[50%] w-[75%] bg-turquoise2/10 rounded-lg p-1 backdrop-blur-[2px]">
+          <div className="md:w-[50%] w-[90%] bg-turquoise2/10 rounded-lg p-1 backdrop-blur-[2px]">
             <h1
               className="p-2 px-5 text-center font-semibold"
               style={{ textShadow: "2px 2px 6px rgba(110, 255, 163, 0.3)" }}
             >
-              reenvisioning a paradigm where ai meets the wild.
+              reimagining a paradigm where ai meets the wild.
             </h1>
             <h1
               className="p-2 px-5 text-center"
@@ -49,22 +49,20 @@ export default function Home() {
               <span className="font-bold italic">phuture </span>is inspired by
               the greek word{" "}
               <span className="font-semibold italic">φύσις (phusis)</span>,
-              &apos;nature&apos;. we&apos;re currently building an app to cultivate
-              engagement with the{" "}
-              <span className="font-semibold">ecological world </span> around
-              us.
+              &apos;nature&apos;. we&apos;re currently building an app to intertwine{""}
+              <span className="font-semibold"> ecological realities.</span>
             </h1>
           </div>
         </div>
 
         <div className="flex justify-center items-center mt-[2%] flex-col">
           <h1
-            className="p-2 px-5 text-center text-green2 font-semibold"
+            className="px-5 text-center text-green2 font-semibold bg-turquoise2/10 rounded-lg p-1 backdrop-blur-[2px]"
             style={{ textShadow: "2px 2px 6px rgba(110, 255, 163, 0.3)" }}
           >
             join our waiting list.
           </h1>
-          <MailchimpFormContainer className=" bg-turquoise2/10 p-2 rounded-lg backdrop-blur-[3px] w-[35%]" />
+          <MailchimpFormContainer className=" bg-turquoise2/10 p-2 rounded-lg backdrop-blur-[5px] md:w-[35%] w-[75%]" />
         </div>
       </div>
     </div>
