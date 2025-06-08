@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900');
 @import "tailwindcss";
 
 @theme {
@@ -13,7 +12,9 @@
   --color-blue2: #1f87ff;
   --color-blue3: #143bff;
   --color-blue4: #030825;
-  --font-railway: "Railway", sans-serif;
+  --font-quango: "Quango", sans-serif;
+  --font-stifly: "Stifly", sans-serif;
+  --font-volunmo: "Volunmo", sans-serif;
 
   /* aurora */
   --blur: 1rem;
@@ -130,6 +131,20 @@
       border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
     }
   }
+}
+
+/* additional futuristic fonts */
+@font-face {
+  font-family: 'Quango';
+  src: url('/fonts/quango.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Stifly';
+  src: url('/fonts/stifly.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Volunmo';
+  src: url('/fonts/volunmo.woff2') format('woff2');
 }
 
 @layer components {
