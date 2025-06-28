@@ -59,7 +59,7 @@ const MailingInput: React.FC<MailingInputProps> = ({ onSubscribe }) => {
             placeholder="hello@phutureai.com"
             required
             disabled={status === "sending"}
-            className="px-4 p-3 w-[100%] placholder:text-turquoise1 rounded-l-lg rounded-r-lg md:rounded-r-none border-2 border-turquoise2 focus:outline-none focus:ring-1 focus:ring-turquoise1 disabled:opacity-50"
+            className="px-4 p-3 w-[100%] placeholder:text-turquoise2/75 rounded-l-lg rounded-r-lg md:rounded-r-none border-2 border-turquoise2 focus:outline-none focus:ring-1 focus:ring-turquoise1 disabled:opacity-50"
           />
           <input
             type="submit"

@@ -35,7 +35,11 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center items-center text-green2 md:text-xl text-md flex-col">
-          <div className="md:w-[50%] w-[90%] bg-turquoise3/25 rounded-lg p-1 backdrop-blur-[2px]">
+          <div className="md:w-[50%] w-[90%] bg-turquoise3/10 rounded-lg p-1 backdrop-blur-[2px]"
+            style={{
+              WebkitMaskImage:
+                "radial-gradient(circle, rgba(0,0,0,0.95) 30%, rgba(0,0,0,0.7) 70%)",
+            }}>
             <h1
               className="p-2 px-5 text-center font-semibold"
               style={{ textShadow: "2px 2px 6px rgba(110, 255, 163, 0.3)" }}
@@ -49,7 +53,7 @@ export default function Home() {
               <span className="font-bold italic">phuture </span>is inspired by
               the greek word{" "}
               <span className="font-semibold italic">φύσις (phusis)</span>
-              —&apos;nature&apos;. we&apos;re currently building an app to
+              —&apos;nature&apos;. we&apos;re currently building a game to
               intertwine
               {""}
               <span className="font-semibold"> ecological realities.</span>
@@ -57,14 +61,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="mailing-list" className="flex justify-center items-center md:mt-[2.5%] flex-col">
-          <h1
-            className="px-5 text-center text-turquoise2 font-semibold md:bg-turquoise3/25 bg-turquoise3/20 rounded-t-lg p-1 backdrop-blur-[2px]"
-            style={{ textShadow: "2px 2px 6px rgba(112, 226, 255, 0.7)" }}
-          >
-            join our waiting list.
-          </h1>
-          <MailchimpFormContainer className=" md:bg-turquoise3/20 bg-turquoise3/10 p-2 rounded-xl backdrop-blur-[5px] md:w-[35%] w-[75%]" />
+        <div id="mailing-list" className="flex justify-center items-center absolute bottom-10 w-full">
+          <div className="md:w-[35%] w-[75%] backdrop-blur-[2px] md:bg-turquoise3/10 bg-turquoise3/20 rounded-lg">
+            <h1
+              className="px-5 text-center text-turquoise2 font-bold p-1"
+              style={{ textShadow: "2px 2px 6px rgba(112, 226, 255, 0.7)" }}
+            >
+              ⏳ join our waiting list ⏳
+            </h1>
+            <MailchimpFormContainer className="p-5" />
+          </div>
+
         </div>
       </div>
     </div>
