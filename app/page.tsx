@@ -13,7 +13,7 @@ export default function Home() {
           className="md:text-3xl text-xl text-turquoise1 font-medium p-2 m-1 font-quango!"
           style={{ textShadow: "2px 2px 6px rgba(110, 255, 163, 0.70)" }}
         >
-          phuture.ai
+          phuture
         </h1>
       </div>
 
