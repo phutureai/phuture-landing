@@ -69,7 +69,7 @@ export default function Home() {
             >
               ⏳ join our waiting list ⏳
             </h1>
-            <MailchimpFormContainer className="p-5" />
+            <MailchimpFormContainer className="p-1 pb-3" />
           </div>
 
         </div>
