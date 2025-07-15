@@ -6,20 +6,32 @@ const ShootingStar = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    let showTimeout: NodeJS.Timeout;
+    let hideTimeout: NodeJS.Timeout;
+
+    const shoot = () => {
+      // position star
       const top = Math.random() * 100;
       const left = Math.random() * 100;
       setPosition({ top: `${top}%`, left: `${left}%` });
       setIsVisible(true);
 
-      setTimeout(() => {
+      // hide after 1s
+      hideTimeout = setTimeout(() => {
         setIsVisible(false);
+
+        // schedule next after 1s gap
+        showTimeout = setTimeout(shoot, 1000);
       }, 1000);
-    }, 4000);
+    };
 
-    return () => clearInterval(interval);
+    shoot(); 
+
+    return () => {
+      clearTimeout(showTimeout);     
+      clearTimeout(hideTimeout);       
+    };
   }, []);
-
   return (
     <div>
       {isVisible && (

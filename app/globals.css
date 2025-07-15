@@ -144,6 +144,12 @@
       opacity: 0;
     }
   }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
 }
 
 /* additional futuristic fonts */
@@ -235,6 +241,11 @@ button {
 
 .animate-shooting {
   animation: shooting 2s forwards;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
 }
 
 input:-webkit-autofill,
