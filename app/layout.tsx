@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "phuture",
-  description: "Landing.",
+  title: "phuture.",
+  description: "landing.",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" href="/phutureB.jpg" />
+      <link rel="icon" href="/phuture7.jpg" />
       <body
         className={`antialiased bg-black`}
       >
