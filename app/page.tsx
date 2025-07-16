@@ -53,9 +53,9 @@ export default function Home() {
           </div>
 
           <div className="absolute top-[70%] left-1/2 -translate-x-1/2 flex gap-2">
-            <div className="w-2 h-2 rounded-full bg-turquoise1 shadow-[0_0_10px_#87ceeb] animate-pulse" />
-            <div className="w-2 h-2 rounded-full bg-turquoise1 shadow-[0_0_10px_#87ceeb] animate-pulse" />
-            <div className="w-2 h-2 rounded-full bg-turquoise1 shadow-[0_0_10px_#87ceeb] animate-pulse" />
+            <div className="md:w-3 md:h-3 w-2 h-2 rounded-full bg-green2 shadow-[0_0_10px_#87ceeb] animate-pulse" />
+            <div className="md:w-3 md:h-3 w-2 h-2 rounded-full bg-green2 shadow-[0_0_10px_#87ceeb] animate-pulse" />
+            <div className="md:w-3 md:h-3 w-2 h-2 rounded-full bg-green2 shadow-[0_0_10px_#87ceeb] animate-pulse" />
           </div>
         </div>
       </div>
@@ -103,10 +103,12 @@ export default function Home() {
 
           <div className="flex justify-center items-center text-green2 md:text-xl text-md flex-col">
             <div
-              className="md:w-[50%] w-[90%] bg-turquoise3/10 rounded-2xl p-1 backdrop-blur-xl"
+              className="md:w-[50%] w-[90%] rounded-2xl md:p-3 p-1 backdrop-blur-xl"
               style={{
+                background:
+                  "radial-gradient(circle at 30% 30%, rgba(6, 182, 212, 0.06) 0%, rgba(6, 182, 212, 0.02) 70%, transparent 100%)",
                 WebkitMaskImage:
-                  "radial-gradient(circle, rgba(0,0,0,0.95) 30%, rgba(0,0,0,0.7) 70%)",
+                  "radial-gradient(circle at center, rgba(0,0,0,0.90) 50%, rgba(0,0,0,0.6) 90%, rgba(0,0,0,0.1) 100%)",
               }}
             >
               <h1
@@ -134,10 +136,18 @@ export default function Home() {
             id="mailing-list"
             className="flex justify-center items-center absolute bottom-10 w-full"
           >
-            <div className="md:w-[35%] w-[75%] backdrop-blur-[10px] md:bg-turquoise3/10 bg-turquoise3/20 rounded-lg px-3">
+            <div
+              className="md:w-[35%] w-[90%] rounded-2xl md:p-3 p-1 backdrop-blur-xl"
+              style={{
+                background:
+                  "radial-gradient(circle at 30% 30%, rgba(6, 182, 212, 0.06) 0%, rgba(6, 182, 212, 0.02) 70%, transparent 100%)",
+                WebkitMaskImage:
+                  "radial-gradient(circle at center, rgba(0,0,0,0.95) 30%, rgba(0,0,0,0.7) 90%, rgba(0,0,0,0.1) 100%)",
+              }}
+            >
               <h1
                 className="px-5 text-center text-turquoise2 font-bold p-1"
-                style={{ textShadow: "2px 2px 6px rgba(112, 226, 255, 0.7)" }}
+                style={{ textShadow: "2px 2px 6px rgba(112, 226, 255, 0.5)" }}
               >
                 coming soon to ios & android.
               </h1>

@@ -16,13 +16,13 @@ const ShootingStar = () => {
       setPosition({ top: `${top}%`, left: `${left}%` });
       setIsVisible(true);
 
-      // hide after 1s
+      // hide after 1.5s
       hideTimeout = setTimeout(() => {
         setIsVisible(false);
 
-        // schedule next after 1s gap
-        showTimeout = setTimeout(shoot, 1000);
-      }, 1000);
+        // schedule next after 0.5s gap
+        showTimeout = setTimeout(shoot, 500);
+      }, 1500);
     };
 
     shoot(); 

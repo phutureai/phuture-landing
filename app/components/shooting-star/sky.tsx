@@ -26,7 +26,7 @@ const Sky = ({ numberOfStars, className = "" }: { numberOfStars: number, classNa
   }, [numberOfStars]);
 
   return (
-    <div className={`${className}`}>
+    <div className={`${className} overflow-hidden`}>
       {stars}
       <ShootingStar />
     </div>

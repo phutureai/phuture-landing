@@ -13,12 +13,14 @@ export default function About() {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 100);
+    document.getElementById('letter-page')?.classList.add('loaded');
 
     return () => clearTimeout(timer);
   }, []);
+
   return (
-    <div className="relative min-h-screen lg:h-screen w-screen bg-black text-white md:overflow-hidden overflow-auto">
-      <Sky numberOfStars={150} className="absolute inset-0 z-0 " />
+    <div id="letter-page" className="relative min-h-screen lg:h-screen bg-black text-white lg:overflow-hidden overflow-auto max-w-screen">
+      <Sky numberOfStars={150} className="absolute inset-0 z-0" />
 
       <div className="absolute bottom-0 left-0 w-full z-0">
         <Image
@@ -26,15 +28,15 @@ export default function About() {
           alt="earth"
           width={1920}
           height={500}
+          priority
           className="w-full h-auto opacity-75"
         />
       </div>
       <div
-        className={`w-full absolute left-0 transition-all duration-1000 ease-out ${
-          isVisible
+        className={`w-full absolute left-0 transition-all duration-1000 ease-out ${isVisible
             ? "translate-x-0 opacity-100"
             : "-translate-x-full opacity-0"
-        }`}
+          }`}
       >
         <Link href="/" passHref>
           <button className=" px-5 p-3 border border-white/50 m-4 rounded-sm hover:bg-white/10 duration-75 delay-100 transition-all ease-in-out">
@@ -43,35 +45,34 @@ export default function About() {
         </Link>
       </div>
 
-      <div className="w-full h-full flex items-center justify-center text-center flex-col lg:my-0 my-20">
+      <div id="letter" className="w-full h-full flex items-center justify-center text-center flex-col lg:my-0 my-20">
         <h1
-          className={`text-md transition-all duration-1000 delay-300 ease-out ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`text-md transition-all duration-1000 delay-300 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
           style={{ textShadow: "2px 2px 4px rgba(255, 255, 255, 0.8)" }}
         >
-          founders&apos; letter
+          a message from the founders
         </h1>
         <div
-          className={`w-[80%] h-auto flex flex-col items-center bg-turquoise1/5 rounded-md border border-white/50 p-5 transition-all duration-1200 delay-500 ease-out ${
-            isVisible
+          id="letter-container" 
+          className={`w-[80%] h-auto flex flex-col items-center bg-turquoise1/5 rounded-md border border-white/50 p-5 transition-all duration-1200 delay-500 ease-out ${isVisible
               ? "translate-y-0 opacity-100 scale-100"
               : "translate-y-20 opacity-0 scale-95"
-          }`}
+            }`}
+          style={{ touchAction: "pan-y" }}
         >
           <div className="flex">
-            <h1 className="backdrop-blur-[3px] p-2 cursor-default italic">
+            <h1 className="md:backdrop-blur-[3px] p-2 cursor-default italic">
               <Typewriter text={`the phuture is at the palm of your hands.`} />
             </h1>
           </div>
 
           <br />
           <div
-            className={`flex transition-all duration-800 delay-900 ease-out ${
-              isVisible
+            className={`flex transition-all duration-800 delay-900 ease-out ${isVisible
                 ? "translate-x-0 opacity-100"
                 : "-translate-x-20 opacity-0"
-            }`}
+              }`}
           >
             <h1>
               <span className="italic">6.7 million</span> hectares of primary
@@ -84,19 +85,17 @@ export default function About() {
           </div>
 
           <hr
-            className={`w-[75%] border-t border-white/10 my-4 transition-all duration-600 delay-1100 ease-out ${
-              isVisible ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
-            }`}
+            className={`w-[75%] border-t border-white/10 my-4 transition-all duration-600 delay-1100 ease-out ${isVisible ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+              }`}
           />
 
           <div
-            className={`flex transition-all duration-800 delay-1300 ease-out ${
-              isVisible
+            className={`flex transition-all duration-800 delay-1300 ease-out ${isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-15 opacity-0"
-            }`}
+              }`}
           >
-            <h1 className="backdrop-blur-[3px] p-2 cursor-default">
+            <h1 className="md:backdrop-blur-[3px] p-2 cursor-default">
               we&apos;re living through an extraordinary moment in human
               history—technological breakthroughs arrive daily, reshaping
               industries and redefining what&apos;s possible. artificial
@@ -113,13 +112,12 @@ export default function About() {
 
           <br />
           <div
-            className={`flex transition-all duration-800 delay-1500 ease-out ${
-              isVisible
+            className={`flex transition-all duration-800 delay-1500 ease-out ${isVisible
                 ? "translate-x-0 opacity-100"
                 : "translate-x-15 opacity-0"
-            }`}
+              }`}
           >
-            <h1 className="backdrop-blur-[3px] p-2 cursor-default">
+            <h1 className="md:backdrop-blur-[3px] p-2 cursor-default">
               at <span className="italic">phuture</span>, we see an opportunity
               to bridge our digital lives and the living planet that sustains
               us. by transforming how people discover and interact with
@@ -140,13 +138,12 @@ export default function About() {
 
           <br />
           <div
-            className={`flex transition-all duration-800 delay-1700 ease-out ${
-              isVisible
+            className={`flex transition-all duration-800 delay-1700 ease-out ${isVisible
                 ? "translate-x-0 opacity-100"
                 : "-translate-x-15 opacity-0"
-            }`}
+              }`}
           >
-            <h1 className="backdrop-blur-[3px] p-2 cursor-default">
+            <h1 className="md:backdrop-blur-[3px] p-2 cursor-default">
               a note on our technical philosophy: while our robust machine
               learning models trained on millions of species drive our core
               recognition capabilities, genuine environmental connection
@@ -164,13 +161,12 @@ export default function About() {
 
           <br />
           <div
-            className={`flex transition-all duration-800 delay-1900 ease-out ${
-              isVisible
+            className={`flex transition-all duration-800 delay-1900 ease-out ${isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-15 opacity-0"
-            }`}
+              }`}
           >
-            <h1 className="backdrop-blur-[4px] p-2 cursor-default">
+            <h1 className="md:backdrop-blur-[4px] p-2 cursor-default">
               our founding duo of incoming uwaterloo cs & math undergrad
               students combines expertise in data science and full stack
               development, but most importantly—we see eye to eye and the vision
@@ -189,26 +185,23 @@ export default function About() {
           </div>
 
           <div
-            className={`flex transition-all duration-800 delay-2100 ease-out ${
-              isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"
-            }`}
+            className={`flex transition-all duration-800 delay-2100 ease-out ${isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"
+              }`}
           >
-            <h1 className="backdrop-blur-[3px] p-2 cursor-default underline underline-offset-4 decoration-white/40">
+            <h1 className="md:backdrop-blur-[3px] p-2 cursor-default underline underline-offset-4 decoration-white/40">
               go outside. touch some grass. adventure is near.
             </h1>
           </div>
 
           <hr
-            className={`w-full border-t border-white/40 my-4 transition-all duration-600 delay-2300 ease-out ${
-              isVisible ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
-            }`}
+            className={`w-full border-t border-white/40 my-4 transition-all duration-600 delay-2300 ease-out ${isVisible ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+              }`}
           />
           <div
-            className={`flex flex-col md:flex-row backdrop-blur-xl rounded-2xl p-5 items-center transition-all duration-1000 delay-2500 ease-out ${
-              isVisible
+            className={`flex flex-col md:flex-row md:backdrop-blur-xl rounded-2xl p-5 items-center transition-all duration-1000 delay-2500 ease-out ${isVisible
                 ? "translate-y-0 opacity-100 scale-100"
                 : "translate-y-20 opacity-0 scale-95"
-            }`}
+              }`}
           >
             <h1 className="p-2 cursor-default">
               we breathe the same air, drink the same water, under the same sky.
@@ -217,8 +210,22 @@ export default function About() {
               all united and part of something infinitely more nuanced than any
               screen could ever display.
             </h1>
-            <Image src="/letter/james.png" alt="james" width={100} height={50} />
-            <Image src="/letter/andy.png" alt="andy" width={100} height={50} />
+            <Image
+              src="/letter/james.png"
+              alt="james"
+              width={100}
+              height={100}
+              className="letter-signature w-[50%] md:w-[10%] h-auto md:mt-0 mt-3"
+              style={{ width: undefined, height: undefined }}
+            />
+            <Image
+              src="/letter/andy.png"
+              alt="andy"
+              width={100}
+              height={100}
+              className="letter-signature w-[50%] md:w-[10%] h-auto"
+              style={{ width: undefined, height: undefined }}
+            />
           </div>
         </div>
       </div>
