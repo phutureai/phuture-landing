@@ -5,6 +5,7 @@
   --color-green2: #95ffe1;
   --color-green3: #0c9b7d;
   --color-green3: #90ee90;
+  --color-green4: #b3e1ca;
   --color-turquoise1: #daf4f0;
   --color-turquoise2: #70e2ff;
   --color-turquoise3: #0e70ad;
@@ -261,7 +262,7 @@ button {
 }
 
 .dot {
-  animation: dotPulse 1s ease-in-out infinite;
+  animation: dotPulse 0.75s ease-in-out infinite;
 }
 
 .dot:nth-child(2) {

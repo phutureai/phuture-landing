@@ -56,7 +56,7 @@ const MailingInput: React.FC<MailingInputProps> = ({ onSubscribe }) => {
             name="EMAIL"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="waitinglist@phutureai.com"
+            placeholder="waitlist@youremail.com"
             required
             disabled={status === "sending"}
             className="px-4 p-3 w-[100%] placeholder:text-turquoise2/75 rounded-l-lg rounded-r-lg md:rounded-r-none border-2 border-turquoise2 focus:outline-none focus:ring-1 focus:ring-turquoise1 disabled:opacity-50"

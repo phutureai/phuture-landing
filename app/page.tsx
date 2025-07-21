@@ -4,6 +4,12 @@ import Image from "next/image";
 import MailchimpFormContainer from "./components/email-list/mailchimp";
 import Link from "next/link";
 import logo from "@/public/phuture4.png";
+import {
+  FaYoutube,
+  // FaSquareXTwitter,
+  FaSquareInstagram,
+  // FaLinkedin,
+} from "react-icons/fa6";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -53,9 +59,9 @@ export default function Home() {
           </div>
 
           <div className="absolute top-[70%] left-1/2 -translate-x-1/2 flex gap-2">
-            <div className="md:w-3 md:h-3 w-2 h-2 rounded-full bg-green2 shadow-[0_0_10px_#87ceeb] animate-pulse" />
-            <div className="md:w-3 md:h-3 w-2 h-2 rounded-full bg-green2 shadow-[0_0_10px_#87ceeb] animate-pulse" />
-            <div className="md:w-3 md:h-3 w-2 h-2 rounded-full bg-green2 shadow-[0_0_10px_#87ceeb] animate-pulse" />
+            <div className="md:w-3 md:h-3 w-2 h-2 rounded-full bg-green2 shadow-[0_0_10px_#87ceeb] animate-pulse dot" />
+            <div className="md:w-3 md:h-3 w-2 h-2 rounded-full bg-green2 shadow-[0_0_10px_#87ceeb] animate-pulse dot" />
+            <div className="md:w-3 md:h-3 w-2 h-2 rounded-full bg-green2 shadow-[0_0_10px_#87ceeb] animate-pulse dot" />
           </div>
         </div>
       </div>
@@ -83,6 +89,23 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
+        {/* <div className="absolute bottom-0 right-0 p-5 opacity-75">
+          <div
+            className="flex flex-row items-center gap-3 p-3 rounded-2xl backdrop-blur-xl"
+            style={{
+              background:
+                "radial-gradient(circle at 30% 30%, rgba(6, 182, 212, 0.06) 0%, rgba(6, 182, 212, 0.02) 70%, transparent 100%)",
+              WebkitMaskImage:
+                "radial-gradient(circle at center, rgba(0,0,0,0.95) 30%, rgba(0,0,0,0.7) 90%, rgba(0,0,0,0.1) 100%)",
+            }}
+          >
+            <a href=""><FaSquareInstagram className="text-2xl text-pink-600 hover:text-pink-800 transition-colors delay-75" /></a>
+            <a href=""></a><FaSquareXTwitter className="text-2xl text-black/90 hover:text-black transition-colors delay-75" />
+            <a href=""></a><FaYoutube className="text-2xl text-red-600 hover:text-red-800 transition-colors delay-75" />
+            <a href=""></a><FaLinkedin className="text-2xl text-blue-700 hover:text-blue-900 transition-colors delay-75" />
+          </div>
+        </div> */}
 
         <div className="flex justify-center flex-col">
           <div className="flex justify-center items-center text-center">
@@ -137,7 +160,7 @@ export default function Home() {
             className="flex justify-center items-center absolute bottom-10 w-full"
           >
             <div
-              className="md:w-[35%] w-[90%] rounded-2xl md:p-3 p-1 backdrop-blur-xl"
+              className="lg:w-[35%] w-[90%] rounded-2xl md:p-3 p-1 backdrop-blur-xl"
               style={{
                 background:
                   "radial-gradient(circle at 30% 30%, rgba(6, 182, 212, 0.06) 0%, rgba(6, 182, 212, 0.02) 70%, transparent 100%)",
@@ -145,12 +168,20 @@ export default function Home() {
                   "radial-gradient(circle at center, rgba(0,0,0,0.95) 30%, rgba(0,0,0,0.7) 90%, rgba(0,0,0,0.1) 100%)",
               }}
             >
-              <h1
-                className="px-5 text-center text-turquoise2 font-bold p-1"
-                style={{ textShadow: "2px 2px 6px rgba(112, 226, 255, 0.5)" }}
-              >
-                coming soon to ios & android.
-              </h1>
+              <div className="flex flex-row items-center justify-center gap-2">
+                <h1
+                  className="text-center text-turquoise2 font-bold p-1"
+                  style={{ textShadow: "2px 2px 6px rgba(112, 226, 255, 0.5)" }}
+                >
+                  coming soon to ios & android.
+                </h1>
+                <a href="https://www.instagram.com/phuturegroup/" target="_black">
+                  <FaSquareInstagram className="text-2xl text-pink-600 hover:text-pink-800 transition-colors delay-200" />
+                </a>
+                <a href="https://www.youtube.com/@phuturegroup/" target="_black">
+                  <FaYoutube className="text-2xl text-red-600 hover:text-red-800 transition-colors delay-200" />
+                </a>
+              </div>
               <MailchimpFormContainer className="p-1 pb-3" />
             </div>
           </div>
