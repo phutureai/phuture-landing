@@ -14,19 +14,24 @@ import {
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hideScreen, setHideScreen] = useState(false);
+  const [showMainContent, setShowMainContent] = useState(false);
 
   useEffect(() => {
     const logoTimer = setTimeout(() => {
       setIsLoaded(true);
     }, 2500);
 
-    // tiny ahh buffer time
+    const contentTimer = setTimeout(() => {
+      setShowMainContent(true);
+    }, 2700);
+
     const screenTimer = setTimeout(() => {
       setHideScreen(true);
     }, 3000);
 
     return () => {
       clearTimeout(logoTimer);
+      clearTimeout(contentTimer);
       clearTimeout(screenTimer);
     };
   }, []);
@@ -66,7 +71,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative min-h-screen h-screen overflow-hidden w-screen bg-[url('/bg.jpg')] bg-cover bg-center opacity-95">
+      <div
+        className={`relative min-h-screen h-screen overflow-hidden w-screen bg-[url('/bg.jpg')] bg-cover bg-center transition-opacity duration-700 ease-out ${
+          showMainContent ? "opacity-95" : "opacity-0"
+        }`}
+      >
         <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_at_top_left,_rgba(30,215,96,0.25)_0%,_transparent_40%)] transition-all duration-300" />
         <div className="flex flex-row justify-between text-center p-2 font-quango! font-medium mr-5">
           <div className="flex flex-row items-center md:text-2xl text-xl">
@@ -138,7 +147,7 @@ export default function Home() {
                 className="p-2 px-5 text-center font-semibold"
                 style={{ textShadow: "2px 2px 6px rgba(110, 255, 163, 0.3)" }}
               >
-                reimagining a paradigm where ai meets the wild.
+                reimagining a paradigm where ai meets the <span className="text-transparent bg-clip-text bg-linear-to-r from-green1/60 via-green1/95 to-green1/80 animate-gradient-x">wild.</span>
               </h1>
               <h1
                 className="p-2 px-5 text-center"
@@ -146,8 +155,8 @@ export default function Home() {
               >
                 <span className="font-bold italic">phuture </span>is inspired by
                 the greek word{" "}
-                <span className="font-semibold italic">φύσις (phusis)</span>
-                —&apos;nature&apos;. we&apos;re currently developing an app to
+                <span className="font-semibold italic">phusis &apos;φύσις&apos;</span>
+                —nature. we&apos;re currently developing a game to
                 intertwine
                 {""}
                 <span className="font-semibold"> ecological realities.</span>
@@ -175,10 +184,16 @@ export default function Home() {
                 >
                   coming soon to ios & android.
                 </h1>
-                <a href="https://www.instagram.com/phuturegroup/" target="_black">
+                <a
+                  href="https://www.instagram.com/phuturegroup/"
+                  target="_black"
+                >
                   <FaSquareInstagram className="text-2xl text-pink-600 hover:text-pink-800 transition-colors delay-200" />
                 </a>
-                <a href="https://www.youtube.com/@phuturegroup/" target="_black">
+                <a
+                  href="https://www.youtube.com/@phuturegroup/"
+                  target="_black"
+                >
                   <FaYoutube className="text-2xl text-red-600 hover:text-red-800 transition-colors delay-200" />
                 </a>
               </div>

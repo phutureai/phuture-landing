@@ -13,6 +13,9 @@
   --color-blue2: #1f87ff;
   --color-blue3: #143bff;
   --color-blue4: #030825;
+
+  --animate-gradient-x: gradient-x 4s ease infinite;
+
   --font-quango: "Quango", sans-serif;
   --font-stifly: "Stifly", sans-serif;
   --font-volunmo: "Volunmo", sans-serif;
@@ -161,6 +164,18 @@
     50% {
       opacity: 1;
       transform: scale(1.2);
+    }
+  }
+
+  @keyframes gradient-x {
+    0%,
+    100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
     }
   }
 }
