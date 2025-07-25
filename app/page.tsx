@@ -182,7 +182,7 @@ export default function Home() {
                   className="text-center text-turquoise2 font-bold p-1"
                   style={{ textShadow: "2px 2px 6px rgba(112, 226, 255, 0.5)" }}
                 >
-                  coming soon to ios & android.
+                  join our alpha testing team
                 </h1>
                 <a
                   href="https://www.instagram.com/phuturegroup/"

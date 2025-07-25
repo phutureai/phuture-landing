@@ -86,8 +86,9 @@ export default function About() {
             }`}
           >
             <h1 className="md:backdrop-blur-[3px] p-2 rounded-md cursor-default">
-              <span className="italic">6.7 million</span> hectares of primary
-              rainforest were lost in 2024. the global population races toward{" "}
+              <span className="italic">6.7 million</span> hectares of rainforest
+              were lost in 2024—an area nearly the size of panama. the global
+              population races toward{" "}
               <span className="italic">8.5 billion</span> by 2030.{" "}
               <span className="underline underline-offset-4 decoration-white/40 font-bold">
                 death wish.
@@ -183,7 +184,7 @@ export default function About() {
             }`}
           >
             <h1
-              className="md:backdrop-blur-[3px] bg-black/5 rounded-md p-2 cursor-default"
+              className="md:backdrop-blur-[3px] lg:backdrop-blur-lg bg-black/5 rounded-md p-2 cursor-default"
               style={{
                 WebkitMaskImage:
                   "radial-gradient(circle at center, rgba(0,0,0,0.90) 10%, rgba(0,0,0,0.9) 95%, rgba(0,0,0,0.5) 100%)",
@@ -191,16 +192,16 @@ export default function About() {
             >
               our founding duo of incoming uwaterloo cs & math undergrad
               students combines expertise in data science and full stack
-              development, but most importantly—we see eye to eye and the vision
-              is 4k. every species represents millions of years of evolutionary
-              innovation, yet we&apos;re losing them faster than we can catalog
-              them.
+              development, but most importantly—the vision is 4k. every species
+              represents millions of years of evolutionary innovation, yet
+              we&apos;re losing them faster than we can catalog them.
               <span className="italic">
                 {" "}
                 wishing on a shooting star won&apos;t cut it.
               </span>{" "}
+              to protect what we&apos;re losing, {" "} 
               <span className="font-bold">
-                to protect what we&apos;re losing, people must fall in love with
+                people must fall in love with
                 what we still have.
               </span>
             </h1>
@@ -232,16 +233,16 @@ export default function About() {
             <h1 className="p-2 cursor-default">
               we breathe the same air, drink the same water, under the same sky.
               the future we&apos;re building shouldn&apos;t come at
-              nature&apos;s expense—it should remind us that we&apos;re all united
-              and part of something infinitely more nuanced than any screen
-              could ever display.
+              nature&apos;s expense—it should remind us that we&apos;re all
+              united and part of something infinitely more nuanced than any
+              screen could ever display.
             </h1>
             <Image
               src="/letter/james.png"
               alt="james"
               width={100}
               height={100}
-              className="letter-signature w-[50%] md:w-[10%] h-auto md:mt-0 mt-3"
+              className="letter-signature w-[50%] md:w-[10%] h-auto md:mt-0 mt-3 opacity-90"
               style={{ width: undefined, height: undefined }}
             />
             <Image
@@ -249,7 +250,7 @@ export default function About() {
               alt="andy"
               width={100}
               height={100}
-              className="letter-signature w-[50%] md:w-[10%] h-auto"
+              className="letter-signature w-[50%] md:w-[10%] h-auto opacity-90"
               style={{ width: undefined, height: undefined }}
             />
           </div>
