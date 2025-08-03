@@ -9,6 +9,7 @@ import {
   // FaSquareXTwitter,
   FaSquareInstagram,
   // FaLinkedin,
+  FaDiscord
 } from "react-icons/fa6";
 
 export default function Home() {
@@ -187,14 +188,23 @@ export default function Home() {
                 <a
                   href="https://www.instagram.com/phuturegroup/"
                   target="_black"
+                  rel="noopener noreferrer"
                 >
                   <FaSquareInstagram className="text-2xl text-pink-600 hover:text-pink-800 transition-colors delay-200" />
                 </a>
                 <a
                   href="https://www.youtube.com/@phuturegroup/"
                   target="_black"
+                  rel="noopener noreferrer"
                 >
                   <FaYoutube className="text-2xl text-red-600 hover:text-red-800 transition-colors delay-200" />
+                </a>
+                <a
+                  href="https://discord.gg/teejSshqvJ"
+                  target="_black"
+                  rel="noopener noreferrer"
+                >
+                  <FaDiscord className="text-2xl text-[#5865F2] hover:text-[#404EED] transition-colors delay-200" />
                 </a>
               </div>
               <MailchimpFormContainer className="p-1 pb-3" />
