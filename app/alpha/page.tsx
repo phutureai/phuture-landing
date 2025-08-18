@@ -233,7 +233,7 @@ export default function AlphaForm() {
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-200"
+                className="input w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-200"
                 placeholder="enter your full name"
                 required
               />
@@ -253,7 +253,7 @@ export default function AlphaForm() {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-200"
+                className="input w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-200"
                 placeholder="enter your email address"
                 required
               />
@@ -273,7 +273,7 @@ export default function AlphaForm() {
                 name="discord"
                 value={formData.discord}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-200"
+                className="input w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-200"
                 placeholder="enter your discord tag"
                 required
               />
@@ -294,7 +294,7 @@ export default function AlphaForm() {
                 value={formData.interests}
                 onChange={handleInputChange}
                 rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-200"
+                className="input w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-200"
                 placeholder="can be as simple as one sentence: what interests you about testing our game (e.g for the experience, an interest in our mission, etc)?"
                 required
               />
