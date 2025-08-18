@@ -56,7 +56,7 @@ export default function AlphaForm() {
 
       const { error } = await supabase
         .from("alpha_test_users")
-        .insert([payload])
+        .insert([payload]);
 
       if (error) {
         console.error("supabase-js insert error:", error);
@@ -301,7 +301,7 @@ export default function AlphaForm() {
             </div>
 
             {/* Terms Checkbox */}
-            <div className="bg-gray-50 rounded-lg p-4">
+            <div className="bg-turquoise1/75 rounded-lg p-4">
               <label className="flex items-start space-x-3 cursor-pointer">
                 <input
                   type="checkbox"
@@ -313,21 +313,25 @@ export default function AlphaForm() {
                 />
                 <span className="text-sm leading-relaxed">
                   i agree to participate in testing activities and understand
-                  that:
+                  that: <span className="text-red-500 ml-1">*</span>
                   <br />
                   • i may be contacted via email or discord regarding testing
                   opportunities
                   <br />• my personal information will be kept confidential and
                   secure
-                  <span className="text-red-500 ml-1">*</span>
                 </span>
               </label>
               <br />
               <span className="text-sm">
-                thank you for your interest in testing our first alpha build. in
-                return, you will be rewarded with paradimes — our game currency,
-                on release! (you also have a high chance of being contacted for
-                potential opportunities in the phuture 👀 such as internships)
+                thank you for your interest in testing our first alpha build! in
+                return, you&apos;ll be rewarded with paradimes — our in-game currency
+                — on release. you&apos;ll also have a chance of being contacted for
+                potential opportunities in the phuture 👀. 
+                <br />
+                on top of that,
+                testers may be rewarded in other ways depending on their
+                contributions — this could include exclusive merch and more
+                surprises along the way.
               </span>
             </div>
 
