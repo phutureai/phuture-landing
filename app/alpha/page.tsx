@@ -274,7 +274,7 @@ export default function AlphaForm() {
                 value={formData.discord}
                 onChange={handleInputChange}
                 className="input w-full px-4 py-3 border border-gray-300 rounded-lg transition duration-200"
-                placeholder="enter your discord tag"
+                placeholder="enter your discord user"
                 required
               />
             </div>
@@ -327,6 +327,7 @@ export default function AlphaForm() {
                 return, you&apos;ll be rewarded with paradimes — our in-game currency
                 — on release. you&apos;ll also have a chance of being contacted for
                 potential opportunities in the phuture 👀. 
+                <br />
                 <br />
                 on top of that,
                 testers may be rewarded in other ways depending on their
